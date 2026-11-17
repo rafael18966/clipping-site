@@ -1,6 +1,10 @@
 export const site = {
   name: "ClipWave",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  url:
+    process.env.NEXT_PUBLIC_SITE_URL ??
+    (process.env.VERCEL_PROJECT_PRODUCTION_URL
+      ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+      : "http://localhost:3000"),
   description:
     "Transforme tes longues vidéos en clips courts prêts à poster sur TikTok, Reels et Shorts, grâce à l’IA.",
 };
