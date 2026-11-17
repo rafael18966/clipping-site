@@ -1,0 +1,23 @@
+{
+  "name": "clipping-worker",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "start": "node src/index.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.9.0",
+    "@aws-sdk/client-s3": "^3.1170.0",
+    "@aws-sdk/s3-request-presigner": "^3.1170.0",
+    "@supabase/supabase-js": "^2.119.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "typescript": "^7.0.2"
+  }
+}
