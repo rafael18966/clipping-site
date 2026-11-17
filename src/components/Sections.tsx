@@ -37,22 +37,22 @@ const features = [
   {
     icon: Captions,
     title: "Sous-titres animés",
-    text: "Des sous-titres précis, mot par mot, avec des modèles prêts à l’emploi et des mots-clés mis en avant.",
+    text: "Des sous-titres précis, synchronisés mot par mot, avec le mot prononcé mis en avant.",
   },
   {
     icon: Crop,
-    title: "Recadrage intelligent",
-    text: "Le cadre suit la personne qui parle et s’adapte au 9:16, au 1:1 ou au 16:9.",
+    title: "Format vertical",
+    text: "Chaque clip est recadré automatiquement en 9:16, prêt pour TikTok, Reels et Shorts.",
   },
   {
     icon: Languages,
     title: "Multilingue",
-    text: "Transcription et sous-titres dans plusieurs langues, avec traduction en option.",
+    text: "Français, anglais, espagnol et plus de 50 langues : la langue est détectée automatiquement.",
   },
   {
     icon: CalendarClock,
-    title: "Publication programmée",
-    text: "Planifie tes clips sur TikTok, Reels et Shorts sans quitter l’outil.",
+    title: "Prêt à poster",
+    text: "Télécharge tes clips en MP4 en un clic et publie-les où tu veux.",
   },
 ];
 
@@ -87,8 +87,8 @@ export function Features() {
 const steps = [
   {
     icon: Link2,
-    title: "Colle ton lien",
-    text: "Un lien YouTube ou un fichier depuis ton ordinateur. Rien à installer.",
+    title: "Importe ta vidéo",
+    text: "Un fichier MP4 ou MOV depuis ton ordinateur ou ton téléphone. Rien à installer.",
   },
   {
     icon: Wand2,
@@ -97,8 +97,8 @@ const steps = [
   },
   {
     icon: Share2,
-    title: "Ajuste et publie",
-    text: "Retouche si besoin, télécharge en HD ou programme la publication.",
+    title: "Télécharge et publie",
+    text: "Regarde tes clips classés par score de viralité, télécharge ceux que tu préfères et poste-les.",
   },
 ];
 

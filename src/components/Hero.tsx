@@ -2,7 +2,6 @@ import Link from "next/link";
 import { ArrowRight, Play, Upload } from "lucide-react";
 import { demoClips, platforms } from "@/lib/site";
 import { ClipThumb } from "./ClipThumb";
-import { LinkInput } from "./LinkInput";
 
 const segments = [
   { left: "8%", width: "7%" },
@@ -33,14 +32,14 @@ export function Hero() {
         </p>
 
         <div className="mt-9 flex w-full flex-col items-center gap-3">
-          <LinkInput />
           <Link
             href="/dashboard"
-            className="flex items-center gap-2 text-sm text-muted transition-colors hover:text-white"
+            className="flex h-14 items-center gap-2.5 rounded-full bg-accent px-7 text-lg font-semibold text-accent-ink transition-transform hover:scale-[1.03]"
           >
-            <Upload className="size-4" />
-            ou importe un fichier vidéo
+            <Upload className="size-5" />
+            Importer ma vidéo
           </Link>
+          <p className="text-sm text-muted">Gratuit jusqu’à 60 minutes de vidéo par mois · sans carte bancaire</p>
         </div>
 
         <div className="mt-16 grid w-full items-center gap-6 rounded-3xl border border-line bg-surface/60 p-4 sm:p-6 lg:grid-cols-[1.15fr_auto_1fr]">

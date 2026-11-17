@@ -57,7 +57,7 @@ export const plans: Plan[] = [
     description: "Pour tester l’outil sur tes premières vidéos.",
     monthly: 0,
     yearly: 0,
-    features: ["60 minutes de vidéo / mois", "Export 720p avec filigrane", "Sous-titres automatiques", "1 modèle de sous-titres"],
+    features: ["60 minutes de vidéo / mois", "Export 720p avec filigrane", "Sous-titres automatiques", "Score de viralité par clip"],
     cta: "Commencer gratuitement",
   },
   {
@@ -70,9 +70,8 @@ export const plans: Plan[] = [
       "300 minutes de vidéo / mois",
       "Export 1080p sans filigrane",
       "Score de viralité par clip",
-      "Recadrage intelligent 9:16, 1:1, 16:9",
-      "Tous les modèles de sous-titres",
-      "Publication programmée",
+      "Format vertical 9:16",
+      "Sous-titres mot à mot",
     ],
     cta: "Essayer Pro",
     featured: true,
@@ -86,8 +85,6 @@ export const plans: Plan[] = [
     features: [
       "1 000 minutes de vidéo / mois",
       "Tout ce qui est inclus dans Pro",
-      "Espaces de travail partagés",
-      "Kit de marque (polices, logo, couleurs)",
       "Support prioritaire",
     ],
     cta: "Choisir Studio",
@@ -101,15 +98,15 @@ export const faq = [
   },
   {
     q: "Quelles sources sont acceptées ?",
-    a: "Un lien YouTube ou un fichier vidéo importé depuis ton ordinateur (MP4, MOV). D’autres sources arriveront ensuite.",
+    a: "Un fichier vidéo importé depuis ton ordinateur ou ton téléphone (MP4, MOV), jusqu’à 2 Go et 3 heures. L’import par lien YouTube arrivera plus tard.",
   },
   {
-    q: "Puis-je modifier les clips générés ?",
-    a: "Oui. Chaque clip peut être raccourci, rallongé, recadré, et ses sous-titres corrigés avant l’export.",
+    q: "Combien de temps prend le traitement ?",
+    a: "Quelques minutes pour une vidéo d’une heure. Tu peux fermer la page pendant l’analyse : tes clips t’attendront dans ton espace.",
   },
   {
     q: "Dans quelles langues les sous-titres sont-ils disponibles ?",
-    a: "Le français et l’anglais en priorité, avec plus de vingt langues prévues.",
+    a: "Plus de 50 langues, dont le français, l’anglais, l’espagnol, l’allemand, l’italien, le portugais et l’arabe. La langue est détectée automatiquement.",
   },
   {
     q: "Puis-je annuler à tout moment ?",
