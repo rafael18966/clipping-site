@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { navLinks, site } from "@/lib/site";
+import { legalLinks, navLinks, site } from "@/lib/site";
 import { Logo } from "./Logo";
 
 export function Footer() {
@@ -21,9 +21,18 @@ export function Footer() {
           </Link>
         </nav>
       </div>
-      <p className="border-t border-line py-6 text-center text-xs text-muted">
-        © 2026 {site.name}. Tous droits réservés.
-      </p>
+      <div className="border-t border-line">
+        <div className="mx-auto flex max-w-6xl flex-col items-center gap-3 px-4 py-6 text-xs text-muted sm:flex-row sm:justify-between sm:px-6">
+          <p>© 2026 {site.name}. Tous droits réservés.</p>
+          <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2">
+            {legalLinks.map((link) => (
+              <Link key={link.href} href={link.href} className="hover:text-white">
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
+      </div>
     </footer>
   );
 }

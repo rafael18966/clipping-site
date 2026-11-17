@@ -9,6 +9,25 @@ export const site = {
     "Transforme tes longues vidéos en clips courts prêts à poster sur TikTok, Reels et Shorts, grâce à l’IA.",
 };
 
+// null = pas encore renseigné : la page affiche « à compléter ».
+export const legal = {
+  ownerName: null as string | null,
+  status: null as string | null,
+  siret: null as string | null,
+  address: null as string | null,
+  email: null as string | null,
+  vatNote: "TVA non applicable, article 293 B du Code général des impôts" as string | null,
+  mediator: null as string | null,
+  sourceVideoRetentionDays: 30,
+  lastUpdated: "17 novembre 2026",
+};
+
+export const legalLinks = [
+  { label: "Mentions légales", href: "/mentions-legales" },
+  { label: "Confidentialité", href: "/confidentialite" },
+  { label: "Conditions générales", href: "/conditions" },
+];
+
 export const navLinks = [
   { label: "Fonctionnalités", href: "/#fonctionnalites" },
   { label: "Comment ça marche", href: "/#comment-ca-marche" },
