@@ -154,7 +154,7 @@ export function Cta() {
           Essaie gratuitement, sans carte bancaire. Tes premiers clips sont prêts en quelques minutes.
         </p>
         <Link
-          href="/dashboard"
+          href="/signup"
           className="mt-8 inline-flex h-12 items-center rounded-full bg-black px-7 font-semibold text-white transition-transform hover:scale-[1.03]"
         >
           Créer mes premiers clips

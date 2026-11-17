@@ -73,7 +73,7 @@ export function Pricing() {
                   {price ? (yearly ? `Facturé ${price * 12} € par an` : "Facturé chaque mois") : null}
                 </p>
                 <Link
-                  href="/login"
+                  href="/signup"
                   className={`mt-6 flex h-11 items-center justify-center rounded-full font-semibold transition-colors ${
                     plan.featured
                       ? "bg-accent text-accent-ink hover:bg-white"

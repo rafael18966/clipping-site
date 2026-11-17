@@ -27,7 +27,7 @@ export function Navbar() {
             Connexion
           </Link>
           <Link
-            href="/dashboard"
+            href="/signup"
             className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-black transition-colors hover:bg-accent"
           >
             Essayer gratuitement
@@ -61,7 +61,7 @@ export function Navbar() {
             Connexion
           </Link>
           <Link
-            href="/dashboard"
+            href="/signup"
             className="mt-2 rounded-full bg-white px-4 py-2.5 text-center font-semibold text-black"
           >
             Essayer gratuitement

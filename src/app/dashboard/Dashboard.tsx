@@ -10,6 +10,7 @@ import {
   Info,
   Link2,
   Loader2,
+  LogOut,
   Pencil,
   Plus,
   Settings,
@@ -18,7 +19,8 @@ import {
 } from "lucide-react";
 import { ClipThumb } from "@/components/ClipThumb";
 import { Logo } from "@/components/Logo";
-import { demoClips } from "@/lib/site";
+import { logout } from "@/app/auth/actions";
+import { demoClips, plans, type PlanId } from "@/lib/site";
 
 type Status = "idle" | "processing" | "done";
 
@@ -36,7 +38,8 @@ const sidebar = [
   { icon: Settings, label: "Réglages" },
 ];
 
-export function Dashboard() {
+export function Dashboard({ email, plan }: { email: string; plan: PlanId }) {
+  const planName = plans.find((p) => p.id === plan)?.name ?? "Gratuit";
   const initialUrl = useSearchParams().get("url") ?? "";
   const [url, setUrl] = useState(initialUrl);
   const [source, setSource] = useState(initialUrl);
@@ -68,7 +71,7 @@ export function Dashboard() {
 
   return (
     <div className="flex min-h-screen flex-1">
-      <aside className="hidden w-60 shrink-0 flex-col border-r border-line bg-surface/50 p-4 md:flex">
+      <aside className="sticky top-0 hidden h-screen w-60 shrink-0 flex-col border-r border-line bg-surface/50 p-4 md:flex">
         <div className="px-2 py-2">
           <Logo />
         </div>
@@ -91,17 +94,31 @@ export function Dashboard() {
           ))}
         </nav>
         <div className="mt-auto rounded-xl border border-line bg-bg p-4 text-sm">
-          <p className="font-medium">Offre Gratuite</p>
-          <p className="mt-1 text-muted">60 min restantes ce mois-ci</p>
-          <div className="mt-3 h-1.5 rounded-full bg-surface-2">
-            <div className="h-full w-full rounded-full bg-accent" />
-          </div>
+          <p className="font-medium">Offre {planName}</p>
+          <p className="mt-1 truncate text-muted" title={email}>
+            {email}
+          </p>
+          <form action={logout} className="mt-3">
+            <button type="submit" className="flex items-center gap-2 text-muted transition-colors hover:text-white">
+              <LogOut className="size-4" />
+              Se déconnecter
+            </button>
+          </form>
         </div>
       </aside>
 
       <main className="min-w-0 flex-1">
         <div className="flex h-16 items-center justify-between border-b border-line px-4 sm:px-8 md:hidden">
           <Logo />
+          <form action={logout}>
+            <button
+              type="submit"
+              aria-label="Se déconnecter"
+              className="grid size-10 place-items-center rounded-lg border border-line text-muted hover:text-white"
+            >
+              <LogOut className="size-4" />
+            </button>
+          </form>
         </div>
 
         <div className="mx-auto max-w-5xl px-4 py-8 sm:px-8 sm:py-12">

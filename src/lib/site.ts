@@ -37,7 +37,10 @@ export const navLinks = [
 
 export const platforms = ["YouTube", "TikTok", "Instagram Reels", "YouTube Shorts", "LinkedIn", "X", "Facebook"];
 
+export type PlanId = "free" | "pro" | "studio";
+
 export type Plan = {
+  id: PlanId;
   name: string;
   description: string;
   monthly: number | null;
@@ -49,6 +52,7 @@ export type Plan = {
 
 export const plans: Plan[] = [
   {
+    id: "free",
     name: "Gratuit",
     description: "Pour tester l’outil sur tes premières vidéos.",
     monthly: 0,
@@ -57,6 +61,7 @@ export const plans: Plan[] = [
     cta: "Commencer gratuitement",
   },
   {
+    id: "pro",
     name: "Pro",
     description: "Pour les créateurs qui publient chaque semaine.",
     monthly: null,
@@ -73,6 +78,7 @@ export const plans: Plan[] = [
     featured: true,
   },
   {
+    id: "studio",
     name: "Studio",
     description: "Pour les agences et les équipes de contenu.",
     monthly: null,
